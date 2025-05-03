@@ -15,3 +15,16 @@ def character_count(book_text):
             letters_in_book[letter] = 1
     return letters_in_book
             
+
+#sort function
+def sort_on(num):
+    return num["num"]
+
+#return sorted list/counts convert to list
+def alphabetize_dict(letters_in_book):
+    letter_report = []
+    for letter in letters_in_book:
+        if letter.isalpha():
+            letter_report.append({"char": letter, "num": letters_in_book[letter]})
+    letter_report.sort(reverse=True, key=sort_on)
+    return letter_report
